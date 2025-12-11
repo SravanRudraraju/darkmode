@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+}
+
+.darkmode{
+    width: 5rem;
+    height: 2rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 0 5px 0 5px;
+    position: relative;
+    cursor: pointer;
+}   
+.darkmode img{
+    width: 1.4rem;
+    z-index: 10;
+}
+.slider{
+    position: absolute;
+    background-color: black;
+    width: 1.9rem;
+    height: 1.9rem;
+    left: 0.1rem;
+    /* right: 0.1rem; */
+    border-radius: 40%;
+    z-index: 10;
+    
+}
