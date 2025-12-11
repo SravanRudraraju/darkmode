@@ -1,17 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     color: black;
     background-color: white;
-}
-body.dark{
-    color: white;
-    background-color: black;
+    transition: 0.3s ease;
 }
 
-.container{
+body.dark {
+    color: white;
+    background-color: black;
+    transition: 0.3s ease;
+}
+
+.container {
     margin: auto;
     margin-top: 1rem;
     display: flex;
@@ -19,7 +23,7 @@ body.dark{
     justify-content: space-between;
 }
 
-.darkmode{
+.darkmode {
     width: 5rem;
     height: 2rem;
     border: 2px solid black;
@@ -31,12 +35,14 @@ body.dark{
     padding: 0 5px 0 5px;
     position: relative;
     cursor: pointer;
-}   
-.darkmode img{
+}
+
+.darkmode img {
     width: 1.4rem;
     z-index: 10;
 }
-.slider{
+
+.slider {
     position: absolute;
     background-color: black;
     width: 1.9rem;
@@ -45,4 +51,31 @@ body.dark{
     /* right: 0.1rem; */
     border-radius: 40%;
     z-index: 10;
+    transition: 0.3s ease;
+}
+
+body.dark .slider {
+    transform: translateX(3.5rem);
+}
+
+@media (max-width : 825px) {
+    .darkmode {
+        width: 80px;
+    }
+
+    .slider {
+        position: absolute;
+        background-color: black;
+        width: 1.9rem;
+        height: 1.9rem;
+        left: 0.1rem;
+        /* right: 0.1rem; */
+        border-radius: 40%;
+        z-index: 10;
+        transition: 0.3s ease;
+    }
+
+    body.dark .slider {
+        transform: translateX(100%);
+    }
 }
